@@ -1,7 +1,7 @@
 # main.py
 
 from fastapi import FastAPI, HTTPException, Depends, status
-from .models import (
+from models import (
     ProductModel,
     CoinModel,
     SelectProductModel,
@@ -11,9 +11,9 @@ from .models import (
     LoadProductsModel,
     VendRequestModel,
 )
-from .product import Product
-from .coin import COIN_DENOMINATIONS
-from .database import products_db, change_db
+from product import Product
+from coin import COIN_DENOMINATIONS
+from database import products_db, change_db
 from typing import Dict, Optional
 import uuid
 

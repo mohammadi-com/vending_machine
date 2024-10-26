@@ -1,6 +1,4 @@
-# vending_machine
-
-Vending Machine API
+# Vending Machine
 
 An interactive vending machine implemented in Python using FastAPI. The application simulates a vending machine that allows users to select products, insert coins, and receive products along with appropriate change. It supports loading products and change, resetting sessions, and viewing the current state of products and change.
 
@@ -20,13 +18,13 @@ An interactive vending machine implemented in Python using FastAPI. The applicat
 
 ## Features
 
-- Product Management: Load and view available products in the vending machine.
-- Change Management: Load and view the current state of change in the machine.
-- Session Management: Start, reset, and manage sessions for individual users.
-- Transaction Handling: Select products, insert coins, vend items, and receive change.
-- Error Handling: Provides informative error messages for invalid inputs and actions.
-- Testing: Comprehensive test suite to ensure all functionalities work as expected.
-- Command-Line Interface: Interact with the vending machine via a CLI for demonstration purposes.
+- **Product Management**: Load and view available products in the vending machine.
+- **Change Management**: Load and view the current state of change in the machine.
+- **Session Management**: Start, reset, and manage sessions for individual users.
+- **Transaction Handling**: Select products, insert coins, vend items, and receive change.
+- **Error Handling**: Provides informative error messages for invalid inputs and actions.
+- **Testing**: Comprehensive test suite to ensure all functionalities work as expected.
+- **Command-Line Interface**: Interact with the vending machine via a CLI for demonstration purposes.
 
 ## Project Structure
 ```
@@ -70,7 +68,7 @@ cd vending_machine
 
 Run the FastAPI application:
 ```
-fastapi dev main.py
+uvicorn main:app --reload
 ```
 
 #### Access the API

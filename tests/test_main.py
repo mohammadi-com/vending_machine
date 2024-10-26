@@ -11,10 +11,8 @@ class TestVendingMachineAPI(unittest.TestCase):
 
     def test_load_products(self):
         response = self.client.post("/load_products", json={
-            "products": {
                 "Soda": {"name": "Soda", "price": 125, "quantity": 10},
                 "Chips": {"name": "Chips", "price": 75, "quantity": 5}
-            }
         })
         self.assertEqual(response.status_code, 200)
         self.assertIn("Products loaded successfully", response.json()["status"])
@@ -34,9 +32,7 @@ class TestVendingMachineAPI(unittest.TestCase):
 
         # Load products and change
         self.client.post("/load_products", json={
-            "products": {
                 "Water": {"name": "Water", "price": 100, "quantity": 10}
-            }
         })
         self.client.post("/load_change", json={
             "coins": { "50": 10, "20": 10, "10": 10 }
@@ -67,9 +63,7 @@ class TestVendingMachineAPI(unittest.TestCase):
 
         # Load products
         self.client.post("/load_products", json={
-            "products": {
                 "Juice": {"name": "Juice", "price": 150, "quantity": 5}
-            }
         })
 
         # Select product
